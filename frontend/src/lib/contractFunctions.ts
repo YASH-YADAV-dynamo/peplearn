@@ -32,7 +32,7 @@ export async function handleDeposit(wallet: any) {
     const tx = await program.methods.deposit().accounts({
       user: wallet.publicKey,
       vault: vaultPda,
-      systemProgram: SystemProgram.programId,
+      system_Program: SystemProgram.programId,
     }).rpc();
 
     console.log("Deposit successful:", tx);
